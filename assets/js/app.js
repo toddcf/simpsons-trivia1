@@ -19,10 +19,15 @@ function checkAnswers() {
   totalCorrect = 0;
   const labels = document.getElementById('quizForm').querySelectorAll('label');
 
-  for ( let i = 0; i < labels.length; i++ ) {
-    labels[i].classList.remove('red');
-    labels[i].classList.remove('green');
-  }
+  // for ( let i = 0; i < labels.length; i++ ) {
+  //   labels[i].classList.remove('red');
+  //   labels[i].classList.remove('green');
+  // }
+
+  labels.forEach( function( label ) {
+    label.classList.remove('red');
+    label.classList.remove('green');
+  });
 
   const answers = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
 
