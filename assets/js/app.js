@@ -19,11 +19,6 @@ function checkAnswers() {
   totalCorrect = 0;
   const labels = document.getElementById('quizForm').querySelectorAll('label');
 
-  // for ( let i = 0; i < labels.length; i++ ) {
-  //   labels[i].classList.remove('red');
-  //   labels[i].classList.remove('green');
-  // }
-
   labels.forEach( function( label ) {
     label.classList.remove('red');
     label.classList.remove('green');
@@ -31,17 +26,18 @@ function checkAnswers() {
 
   const answers = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
 
-  for ( let i = 0; i < answers.length; i++ ) {
-    let parentElement = answers[i].parentElement;
-    let dataCorrectAttribute = answers[i].getAttribute('data-correct');
-    if ( dataCorrectAttribute === "true" ) {
+  answers.forEach( function( answer ) {
+    let parentElement = answer.parentElement;
+    let dataCorrectAttribute = answer.getAttribute('data-correct');
+    if ( dataCorrectAttribute === 'true' ) {
       totalCorrect++;
       parentElement.classList.add('green');
     }
     else {
       parentElement.classList.add('red');
     }
-  }
+  });
+  
   displayCorrect.innerHTML = totalCorrect;
   calculatePercentage();
 }
