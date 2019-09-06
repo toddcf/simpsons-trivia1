@@ -16,7 +16,7 @@
 
     <div class="questionCard">
       <div class="questionCard__content">
-        <h2 class="question">Question 1</h2>
+        <h2 class="question">Homer's supervillain boss was named&nbsp;.&nbsp;.&nbsp;.</h2>
         <div class="question-img">
           <div class="question-img__img">
         </div>
@@ -24,19 +24,19 @@
           <div class="answers">
             <label class="answers__label">
               <input type="radio" name="q1" data-correct="false">
-              A)
+              A) Ernst Stavro Blofeld
             </label>
             <label class="answers__label">
               <input type="radio" name="q1" data-correct="false">
-              B)
+              B) Auric Butterfinger
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q1" data-correct="false">
+              C) Dr. Yes
             </label>
             <label class="answers__label">
               <input type="radio" name="q1" data-correct="true">
-              C)
-            </label>
-            <label class="answers__label">
-              <input type="radio" name="q1" data-correct="false">
-              D)
+              D) Hank Scorpio
             </label>
           </div>
         </div>
@@ -484,7 +484,11 @@
 
     <h2 class="resultsHeading">Total Correct: <span id="displayCorrect"></span> / <span id="displayTotalQuestions"></span> = <span id="displayPercentCorrect"></span>%</h2>
 
-    <div class="button" id="resetBtn">Reset Game</div>
+    <div id="nextOptions">
+      <p>Review your answers above, or&nbsp;.&nbsp;.&nbsp;.</p>
+      <div class="button" id="resetBtn">Reset Game</div>
+    </div>
+    
 
   </form>
 

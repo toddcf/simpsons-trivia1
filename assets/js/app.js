@@ -1,7 +1,7 @@
 let totalCorrect;
 const displayCorrect = document.getElementById('displayCorrect');
 const totalQuestions = document.querySelectorAll('.question').length;
-const resetBtn = document.getElementById('resetBtn');
+const nextOptions = document.getElementById('nextOptions');
 
 function clearBgColors() {
   const labels = document.getElementById('quizForm').querySelectorAll('label');
@@ -40,7 +40,7 @@ function checkAnswers() {
   
   displayCorrect.innerHTML = totalCorrect;
   calculatePercentage();
-  resetBtn.style.display = 'block';
+  nextOptions.style.display = 'block';
 }
 
 function newGame() {
@@ -49,7 +49,7 @@ function newGame() {
   clearBgColors();
   document.getElementById('displayTotalQuestions').innerHTML = totalQuestions;
   calculatePercentage();
-  resetBtn.style.display = 'none';
+  nextOptions.style.display = 'none';
   const checked = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
   checked.forEach( function( check ) {
     check.checked = false;
