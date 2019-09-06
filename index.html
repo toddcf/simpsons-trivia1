@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>"The Simpsons" Trivia Game</title>
+  <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+  <h1 class="heading1">The Simpsons Trivia Game</h1>
+
+  <form id="quizForm">
+
+    <div class="questionCard">
+
+      <div class="questionCard__content">
+        <h2 class="question">Question 1</h2>
+        <div class="question-img">
+          <div class="question-img__img">
+        </div>
+        <div class="answer-block">
+          <div class="answers">
+            <label class="answers__label">
+              <input type="radio" name="q1" data-correct="false">
+              A)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q1" data-correct="false">
+              B)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q1" data-correct="true">
+              C)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q1" data-correct="false">
+              D)
+            </label>
+          </div>
+        </div>
+      </div>
+      
+    </div> <!-- Close .questionCard -->
+    
+    
+
+    <div class="button" id="submitBtn">Submit</div>
+
+    <h2 class="resultsHeading">Total Correct: <span id="displayCorrect"></span> / <span id="totalQuestionsDisplay"></span></h2>
+
+  </form>
+
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+<script type="text/javascript"></script>
+
+</body>
+</html>
