@@ -12,7 +12,6 @@ function clearBgColors() {
   });
 }
 
-// Calculate and display percent correct:
 function calculatePercentage() {
   let percentCorrect = (totalCorrect / totalQuestions) * 100;
   document.getElementById('displayPercentCorrect').innerHTML = percentCorrect.toFixed(0);
@@ -48,17 +47,10 @@ function newGame() {
   totalCorrect = 0;
   displayCorrect.innerHTML = totalCorrect;
   clearBgColors();
-  
-  // Count and display total number of questions:
-  
   document.getElementById('displayTotalQuestions').innerHTML = totalQuestions;
-
   calculatePercentage();
-
   resetBtn.style.display = 'none';
-
   const checked = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
-
   checked.forEach( function( check ) {
     check.checked = false;
   });
