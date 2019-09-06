@@ -15,7 +15,6 @@
   <form id="quizForm">
 
     <div class="questionCard">
-
       <div class="questionCard__content">
         <h2 class="question">Question 1</h2>
         <div class="question-img">
@@ -42,14 +41,71 @@
           </div>
         </div>
       </div>
-      
+    </div> <!-- Close .questionCard -->
+
+    <div class="questionCard">
+      <div class="questionCard__content">
+        <h2 class="question">Question 2</h2>
+        <div class="question-img">
+          <div class="question-img__img">
+        </div>
+        <div class="answer-block">
+          <div class="answers">
+            <label class="answers__label">
+              <input type="radio" name="q2" data-correct="false">
+              A)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q2" data-correct="false">
+              B)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q2" data-correct="true">
+              C)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q2" data-correct="false">
+              D)
+            </label>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Close .questionCard -->
+
+    <div class="questionCard">
+      <div class="questionCard__content">
+        <h2 class="question">Question 3</h2>
+        <div class="question-img">
+          <div class="question-img__img">
+        </div>
+        <div class="answer-block">
+          <div class="answers">
+            <label class="answers__label">
+              <input type="radio" name="q3" data-correct="false">
+              A)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q3" data-correct="false">
+              B)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q3" data-correct="true">
+              C)
+            </label>
+            <label class="answers__label">
+              <input type="radio" name="q3" data-correct="false">
+              D)
+            </label>
+          </div>
+        </div>
+      </div>
     </div> <!-- Close .questionCard -->
     
     
 
     <div class="button" id="submitBtn">Submit</div>
 
-    <h2 class="resultsHeading">Total Correct: <span id="displayCorrect"></span> / <span id="totalQuestionsDisplay"></span></h2>
+    <h2 class="resultsHeading">Total Correct: <span id="displayCorrect"></span> / <span id="displayTotalQuestions"></span> = <span id="displayPercentCorrect"></span>%</h2>
 
   </form>
 

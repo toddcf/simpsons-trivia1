@@ -3,8 +3,15 @@ const displayCorrect = document.getElementById('displayCorrect');
 displayCorrect.innerHTML = totalCorrect;
 
 // Count and display total number of questions:
-document.getElementById('totalQuestionsDisplay').innerHTML = document.querySelectorAll('.question').length;
+const totalQuestions = document.querySelectorAll('.question').length;
+document.getElementById('displayTotalQuestions').innerHTML = totalQuestions;
 
+// Calculate and display percent correct:
+function calculatePercentage() {
+  let percentCorrect = (totalCorrect / totalQuestions) * 100;
+  document.getElementById('displayPercentCorrect').innerHTML = percentCorrect.toFixed(0);
+}
+calculatePercentage();
 
 function checkAnswers() {
   totalCorrect = 0;
@@ -16,6 +23,7 @@ function checkAnswers() {
     }
   }
   displayCorrect.innerHTML = totalCorrect;
+  calculatePercentage();
 }
 
 document.getElementById('submitBtn').onclick = checkAnswers;
