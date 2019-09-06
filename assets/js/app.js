@@ -1,28 +1,29 @@
-let totalCorrect = 0;
+let totalCorrect;
 const displayCorrect = document.getElementById('displayCorrect');
-displayCorrect.innerHTML = totalCorrect;
-
-// Count and display total number of questions:
 const totalQuestions = document.querySelectorAll('.question').length;
-document.getElementById('displayTotalQuestions').innerHTML = totalQuestions;
+const resetBtn = document.getElementById('resetBtn');
 
-// Calculate and display percent correct:
-function calculatePercentage() {
-  let percentCorrect = (totalCorrect / totalQuestions) * 100;
-  document.getElementById('displayPercentCorrect').innerHTML = percentCorrect.toFixed(0);
-}
-calculatePercentage();
-
-const answersLabels = document.querySelectorAll('.answers__label');
-
-function checkAnswers() {
-  totalCorrect = 0;
+function clearBgColors() {
   const labels = document.getElementById('quizForm').querySelectorAll('label');
 
   labels.forEach( function( label ) {
     label.classList.remove('red');
     label.classList.remove('green');
   });
+}
+
+// Calculate and display percent correct:
+function calculatePercentage() {
+  let percentCorrect = (totalCorrect / totalQuestions) * 100;
+  document.getElementById('displayPercentCorrect').innerHTML = percentCorrect.toFixed(0);
+}
+
+const answersLabels = document.querySelectorAll('.answers__label');
+
+function checkAnswers() {
+  totalCorrect = 0;
+  
+  clearBgColors();
 
   const answers = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
 
@@ -40,6 +41,30 @@ function checkAnswers() {
   
   displayCorrect.innerHTML = totalCorrect;
   calculatePercentage();
+  resetBtn.style.display = 'block';
 }
 
+function newGame() {
+  totalCorrect = 0;
+  displayCorrect.innerHTML = totalCorrect;
+  clearBgColors();
+  
+  // Count and display total number of questions:
+  
+  document.getElementById('displayTotalQuestions').innerHTML = totalQuestions;
+
+  calculatePercentage();
+
+  resetBtn.style.display = 'none';
+
+  const checked = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
+
+  checked.forEach( function( check ) {
+    check.checked = false;
+  });
+}
+
+newGame();
+
 document.getElementById('submitBtn').onclick = checkAnswers;
+resetBtn.onclick = newGame;

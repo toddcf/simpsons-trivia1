@@ -38,6 +38,10 @@
   background-color: red;
 }
 
+#resetBtn {
+  display: none;
+}
+
 .resultsHeading {
   font-family: 'Schoolbell', cursive;
   text-transform: uppercase;
