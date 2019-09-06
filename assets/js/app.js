@@ -17,12 +17,17 @@ const answersLabels = document.querySelectorAll('.answers__label');
 
 function checkAnswers() {
   totalCorrect = 0;
+  const labels = document.getElementById('quizForm').querySelectorAll('label');
+
+  for ( let i = 0; i < labels.length; i++ ) {
+    labels[i].classList.remove('red');
+    labels[i].classList.remove('green');
+  }
+
   const answers = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
 
   for ( let i = 0; i < answers.length; i++ ) {
     let parentElement = answers[i].parentElement;
-    parentElement.classList.remove('red');
-    parentElement.classList.remove('green');
     let dataCorrectAttribute = answers[i].getAttribute('data-correct');
     if ( dataCorrectAttribute === "true" ) {
       totalCorrect++;

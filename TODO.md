@@ -1,8 +1,6 @@
 # To Do
 
 1. Function
-  - Radio buttons for each group of answers.
-  - When you submit answers:
-    - `checkAnswers()` must REMOVE all classNames before adding any back.
+  - Play Again button that resets the quiz.
 
-2. Form
+2. Style
