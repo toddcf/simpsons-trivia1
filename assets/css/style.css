@@ -5,19 +5,25 @@
 }
 
 .button {
+  background-color: #ffce1a;
   border: 4px solid #000;
   color: #000;
   cursor: pointer;
   font-family: 'Schoolbell', cursive;
   padding: .5% 2%;
   text-transform: uppercase;
-  transition: 250ms;
+  transition: 200ms;
   width: max-content;
 }
 
 .button:hover {
   background-color: #000;
-  color: #fff;
+  border: 4px solid #ffce1a;
+  color: #ffce1a;
+}
+
+.green {
+  background-color: green;
 }
 
 .heading1 {
@@ -26,6 +32,10 @@
 
 .question {
   font-family: 'Schoolbell', cursive;
+}
+
+.red {
+  background-color: red;
 }
 
 .resultsHeading {

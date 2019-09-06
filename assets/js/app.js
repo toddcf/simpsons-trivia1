@@ -13,13 +13,23 @@ function calculatePercentage() {
 }
 calculatePercentage();
 
+const answersLabels = document.querySelectorAll('.answers__label');
+
 function checkAnswers() {
   totalCorrect = 0;
   const answers = document.getElementById('quizForm').querySelectorAll('input[type=radio]:checked');
+
   for ( let i = 0; i < answers.length; i++ ) {
+    let parentElement = answers[i].parentElement;
+    parentElement.classList.remove('red');
+    parentElement.classList.remove('green');
     let dataCorrectAttribute = answers[i].getAttribute('data-correct');
     if ( dataCorrectAttribute === "true" ) {
       totalCorrect++;
+      parentElement.classList.add('green');
+    }
+    else {
+      parentElement.classList.add('red');
     }
   }
   displayCorrect.innerHTML = totalCorrect;
