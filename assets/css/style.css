@@ -22,6 +22,12 @@
   color: #ffce1a;
 }
 
+@media (min-width: 992px) {
+  .flex-left {
+    width: 50%;
+  }
+}
+
 .green {
   background-color: green;
 }

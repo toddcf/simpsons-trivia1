@@ -1,0 +1,29 @@
+@media (min-width: 1200px) {
+  .center__1140 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+  }
+}
+
+/*@media (min-width: 1500px) {
+  .center__1440 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+  }
+}*/
+
+@media (min-width: 1940px) {
+  .center__1920 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+  }
+}
