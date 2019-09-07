@@ -4,6 +4,17 @@
   font-family: 'Schoolbell', cursive;
 }
 
+@media (min-width: 992px) {
+  .bg-img-main {
+    background-attachment: fixed;
+    background-image: url(../img/simpsons-blue-bg.jpg); /* Needs to be compressed */
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+}
+
 .button {
   background-color: #ffce1a;
   border: 4px solid #000;
@@ -24,7 +35,7 @@
 
 @media (min-width: 992px) {
   .flex-left {
-    width: 50%;
+    width: 45%;
   }
 }
 
