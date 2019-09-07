@@ -77,7 +77,7 @@ var questions = [{ /*var used to be "questionsToPick*/
       "He was reading billboards on \"new billboard day\" and saw Krusty the Klown\'s advertisement.",
       "Barney Gumble woke up from a drunken blackout with a diploma from Krusty\'s Clown College.",
       "He received a recorded phone message from Krusty the Klown\'s AT-5000 auto-dialer.",
-      "His coworkers (Lenny and Carl) dared him to after Mr. Burns said he would fund any employee’s education."
+      "His coworkers (Lenny and Carl) dared him to after Mr. Burns said he would fund any employee\'s education."
     ],
     correctAnswer: "He was reading billboards on \"new billboard day\" and saw Krusty the Klown\'s advertisement.",
     picture: "../images/krustys_clown_college_billboard.png"
