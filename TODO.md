@@ -1,5 +1,7 @@
 # To Do
 
+- Mockup
+  - Hex color codes: https://www.schemecolor.com/homer-the-simpsons-cartoon-colors.php
 - Create grid.
 - Background image:
   - On top for small screens.
